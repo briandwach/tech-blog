@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
     const postsData = await Posts.findAll({
       attributes: ['id', 'title', 'content', 'date_created'],
       include: [{ model: Users, attributes: ['username'] }],
-      order: [['date_created', 'ASC']],
+      order: [['date_created', 'DESC']],
       limit: 5
     });
 
@@ -18,10 +18,62 @@ router.get('/', async (req, res) => {
     // Pass serialized data and session flag into template
     res.render('homepage', {
       posts,
+      logged_in: req.session.logged_in
     });
   } catch (err) {
     res.status(500).json(err);
   }
+});
+
+router.get('/login', (req, res) => {
+  // If the user is already logged in, redirect the request to another route
+  if (req.session.logged_in) {
+    res.redirect('/dashboard');
+    return;
+  }
+
+  res.render('login', {
+    logged_in: req.session.logged_in
+  });
+});
+
+
+router.get('/logout', (req, res) => {
+  if (req.session.logged_in) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+
+    res.render('login', {
+      logged_in: req.session.logged_in
+    });
+  } else {
+    res.status(404).end();
+  }
+}); 
+
+router.get('/signup', (req, res) => {
+  // If the user is already logged in, redirect the request to another route
+  if (req.session.logged_in) {
+    res.redirect('/dashboard');
+    return;
+  }
+
+  res.render('signup', {
+    logged_in: req.session.logged_in
+  });
+});
+
+router.get('/dashboard', (req, res) => {
+  // If the user is already logged in, redirect the request to another route
+  if (!req.session.logged_in) {
+    res.redirect('/login')
+    return;
+  }
+
+  res.render('dashboard', {
+    logged_in: req.session.logged_in
+  });
 });
 
 module.exports = router;
