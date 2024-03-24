@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Demystifying MVC: The Basics",
+    "content": "The M stands for Model. The V stands for View.  And the C stands for Controller",
+    "date_created": "2020-08-19 12:31:30",
+    "user_id": 1
+  },
+  {
+    "title": "Web Development for Cats",
+    "content": "I've been putting a lot of thought into the value of web development and its impact on cats.  I've come to the conclusion that it is important for humans to continue developing the web.  They are building tools that ensure my cat food is delivered to our house on time and ways for them to get alerts when my litter box must be cleaned. The humans should keep doing it.  Us cats though, we will continue to take naps.",
+    "date_created": "2023-07-16 14:05:26",
+    "user_id": 2
+  },
+  {
+    "title": "Advances in AI and Time Spent with Cats",
+    "content": "I am beginning to see a correlation between the amount of time my owner is spending with me and the continuing advances of artificial intelligence.  As AI makes large advances, my owner is spending more time playing with me and cleaning my home.  I fully support the development of artificial intelligences.",
+    "date_created": "2024-03-23 11:15:43",
+    "user_id": 2
+  },
+  {
+    "title": "Birds",
+    "content": "The birds outside my window clearly do not have the capacity to become web developers.  The fact that they have not trained humans to bring them into their homes and take care of them, is a clear example of the point I am trying to make.",
+    "date_created": "2023-09-04 09:30:47",
+    "user_id": 2
+  },
+  {
+    "title": "Putting the Pieces Together",
+    "content": "Learning the individual fundamentals of web development is not difficult. The challenge begins when you need to piece everything together to create an application that provides value. That said, do not give up. Understanding one fundamental at a time is the only path to success.",
+    "date_created": "2024-02-27 10:40:42",
+    "user_id": 3
+  },
+  {
+    "title": "Changing Careers",
+    "content": "The thought of changing careers can be daunting. You may be extremely successful in your current role, but when you begin to think about applying for a job in a different field, it may feel like you have no skills.  It's important to not sell yourself short. Be creative in understanding what talents you do have and don't be afraid to seek methods for advancing your knowledge in new areas.",
+    "date_created": "2022-05-01 15:42:40",
+    "user_id": 3
+  }
+]
