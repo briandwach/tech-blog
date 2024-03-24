@@ -1,0 +1,56 @@
+[
+    {
+        "content": "To provide some more information, Model relates to the server and the database.  View relates to the user's browser.  Lastly, the Controller is where the methods are definied for the Model and View to interact.",
+        "date_created": "2020-08-21 21:50:52",
+        "user_id": 2,
+        "post_id": 1
+    },
+    {
+        "content": "I just woke up from a nap and I am very happy to have discovered this post. I couldn't agree more.",
+        "date_created": "2023-08-14 15:45:53",
+        "user_id": 1,
+        "post_id": 2
+    },
+    {
+        "content": "Excuse me, this blog site is intended for professional development.  I unfortunately need to flag this post for the moderators.",
+        "date_created": "2023-08-15 07:14:03",
+        "user_id": 3,
+        "post_id": 2
+    },
+    {
+        "content": "I am happy to see some healthy collaboration and discussion on this web site.",
+        "date_created": "2020-09-10 08:30:00",
+        "user_id": 3,
+        "post_id": 1
+    },
+    {
+        "content": "I don't know. I've heard of birds living in human homes. Mixed views those, some love it and some felt too contained.",
+        "date_created": "2023-10-17 08:45:45",
+        "user_id": 1,
+        "post_id": 4
+    },
+    {
+        "content": "I can confirm what Bowie has mentioned. There are many birds living in human homes.",
+        "date_created": "2023-10-17 10:17:17",
+        "user_id": 3,
+        "post_id": 4
+    },
+    {
+        "content": "Thank you for that feedback. Are they using the human's computers though?",
+        "date_created": "2023-10-17 14:30:40",
+        "user_id": 2,
+        "post_id": 4
+    },
+    {
+        "content": "This is very encouraging to hear these thoughts. I feel less alone in the web development world!",
+        "date_created": "2024-3-01 17:30:40",
+        "user_id": 1,
+        "post_id": 5
+    },
+    {
+        "content": "I'm up late coding tonight and this post has brought me new life. Thank you for this!",
+        "date_created": "2024-3-02 01:21:13",
+        "user_id": 1,
+        "post_id": 5
+    }
+]
