@@ -37,21 +37,6 @@ router.get('/login', (req, res) => {
   });
 });
 
-
-router.get('/logout', (req, res) => {
-  if (req.session.logged_in) {
-    req.session.destroy(() => {
-      res.status(204).end();
-    });
-
-    res.render('login', {
-      logged_in: req.session.logged_in
-    });
-  } else {
-    res.status(404).end();
-  }
-}); 
-
 router.get('/signup', (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {

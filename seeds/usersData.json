@@ -1,16 +1,13 @@
 [
   {
-    "id": 1,
     "username": "Bowie",
     "password": "iliketoeat"
   },
   {
-    "id": 2,
     "username": "Winnie",
     "password": "iliketomeow"
   },
   {
-    "id": 3,
     "username": "Bird With One Wing",
     "password": "stillflying"
   }
