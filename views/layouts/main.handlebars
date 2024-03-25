@@ -12,16 +12,27 @@
 <body>
   <header>
     <nav class="flex">
-      <p>Home</p>
-      <p>Dashboard</p>
-      <p>Logout</Logout>
+      <p><a href="/">Home</a></p>
+      <p><a href="/dashboard">Dashboard</a></p>
+       {{#if logged_in}}
+        <p><a href="/logout" id="logout">Logout</a></p>
+        {{else}}
+        <p><a href="/login">Login</a></p>
+        {{/if}}
     </nav>
-    <h1>The Tech Blog</h1>
+      {{#if dashboard}}
+        <h1>Dashboard</h1>
+        {{else}}
+        <h1>The Tech Blog</h1>
+        {{/if}}
   </header>
 {{{ body }}}
+
 </body>
 <footer>
-
+ {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
 </footer>
 
 </html>
