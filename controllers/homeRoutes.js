@@ -61,4 +61,33 @@ router.get('/dashboard', (req, res) => {
   });
 });
 
+
+router.get('/posts/:id', async (req, res) => {
+  try {
+    const postData = await Posts.findByPk(req.params.id, {
+      attributes: ['id', 'title', 'content', 'date_created'],
+      include: [{ model: Users, attributes: ['username'] }]
+    });
+
+    const post = postData.get({ plain: true });
+
+    const commentData = await Comments.findAll({
+      where: { post_id: req.params.id},
+      attributes: ['content', 'date_created'],
+      include: [{ model: Users, attributes: ['username'] }],
+      order: [['date_created', 'DESC']]
+    });
+
+    const comments = commentData.map((comment) => comment.get({ plain: true }));
+
+    res.render('post', {
+      post,
+      comments,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 module.exports = router;

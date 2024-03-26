@@ -9,3 +9,11 @@
 nav p, nav a {
     margin: 5px;
 }
+
+.comment {
+    border-top: 1px dashed black;
+}
+
+.comment p:first-child {
+    margin-top: 3px;
+}
