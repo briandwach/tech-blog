@@ -37,5 +37,32 @@ router.get('/new', withAuth, async (req, res) => {
       });
   });
 
+  router.get('/update/:id', withAuth, async (req, res) => {
+    try {
+      const postData = await Posts.findByPk(req.params.id, {
+        attributes: ['id', 'title', 'content']
+      });
+  
+      const post = postData.get({ plain: true });
+  
+      const commentData = await Comments.findAll({
+        where: { post_id: req.params.id },
+        attributes: ['content', 'date_created'],
+        include: [{ model: Users, attributes: ['username'] }],
+        order: [['date_created', 'DESC']]
+      });
+  
+      const comments = commentData.map((comment) => comment.get({ plain: true }));
+  
+      res.render('update', {
+        post,
+        comments,
+        logged_in: req.session.logged_in,
+        dashboard: true
+      });
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
 
 module.exports = router;

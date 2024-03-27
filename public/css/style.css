@@ -27,3 +27,7 @@ nav p, nav a {
 .comment p:first-child {
     margin-top: 3px;
 }
+
+.wide {
+    width: 100%;
+}
