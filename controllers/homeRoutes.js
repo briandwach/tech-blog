@@ -57,7 +57,8 @@ router.get('/dashboard', (req, res) => {
   }
 
   res.render('dashboard', {
-    logged_in: req.session.logged_in
+    logged_in: req.session.logged_in,
+    dashboard: true
   });
 });
 
