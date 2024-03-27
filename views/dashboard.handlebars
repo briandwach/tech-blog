@@ -1,1 +1,14 @@
-<h1>Hello World</h1>
+<!-- Loop over each post in the posts array -->
+{{#each posts as |post| }}
+<div class="">
+    <div class="flex post dashboard">
+        <h2>
+            <a href="posts/{{post.id}}">{{post.title}}</a>
+        </h2>
+        <p>{{format_date post.date_created}}</p>
+    </div>
+</div>
+{{/each}}
+<div class="form-group flex center">
+    <a class="btn btn-primary" href="dashboard/new">+ New Post</a>
+</div>
