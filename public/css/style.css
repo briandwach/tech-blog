@@ -6,6 +6,16 @@
     justify-content: space-between;
 }
 
+.dashboard {
+    background: lightgrey;
+    border-radius: 10px;
+    margin: 3px;
+}
+
+.center {
+    justify-content: center;
+}
+
 nav p, nav a {
     margin: 5px;
 }
@@ -16,4 +26,8 @@ nav p, nav a {
 
 .comment p:first-child {
     margin-top: 3px;
+}
+
+.wide {
+    width: 100%;
 }
