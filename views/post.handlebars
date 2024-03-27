@@ -1,6 +1,10 @@
 <div class="">
     <div class="flex post">
+        {{#if user}}
+        <a href="/dashboard/update/{{post.id}}"><h2>{{post.title}}</h2></a>
+        {{else}}
         <h2>{{post.title}}</h2>
+        {{/if}}
         <p>Posted by {{post.user.username}} on {{format_date post.date_created}} </p>
     </div>
     <div class="">
