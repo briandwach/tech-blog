@@ -14,23 +14,23 @@
     <nav class="flex">
       <p><a href="/">Home</a></p>
       <p><a href="/dashboard">Dashboard</a></p>
-       {{#if logged_in}}
-        <p><a href="/api/users/logout" id="logout">Logout</a></p>
-        {{else}}
-        <p><a href="/login">Login</a></p>
-        {{/if}}
+      {{#if logged_in}}
+      <p><a href="/api/users/logout" id="logout">Logout</a></p>
+      {{else}}
+      <p><a href="/login">Login</a></p>
+      {{/if}}
     </nav>
-      {{#if dashboard}}
-        <h1>Dashboard</h1>
-        {{else}}
-        <h1>The Tech Blog</h1>
-        {{/if}}
+    {{#if dashboard}}
+    <h1>Dashboard</h1>
+    {{else}}
+    <h1>The Tech Blog</h1>
+    {{/if}}
   </header>
-{{{ body }}}
+  {{{ body }}}
 
 </body>
 <footer>
- {{#if logged_in}}
+  {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
 </footer>

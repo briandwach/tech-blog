@@ -4,6 +4,12 @@
 
 .post {
     justify-content: space-between;
+    align-items: center;
+}
+
+.post p {
+    margin-bottom: 0px;
+    margin-right: 5px;
 }
 
 .dashboard {

@@ -1,7 +1,9 @@
-<div class="">
+<div>
     <div class="flex post">
         {{#if user}}
-        <a href="/dashboard/update/{{post.id}}"><h2>{{post.title}}</h2></a>
+        <a href="/dashboard/update/{{post.id}}">
+            <h2>{{post.title}}</h2>
+        </a>
         {{else}}
         <h2>{{post.title}}</h2>
         {{/if}}
