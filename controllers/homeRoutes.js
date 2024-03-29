@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Posts, Users, Comments } = require('../models');
-const withAuth = require('../utils/auth');
 
+// Route to GET and view 5 most recent posts
 router.get('/', async (req, res) => {
   try {
     // Get all posts in order of most recent
@@ -49,6 +49,7 @@ router.get('/signup', (req, res) => {
   });
 });
 
+// Route to view a specific post and its comments
 router.get('/posts/:id', async (req, res) => {
   try {
     const postData = await Posts.findByPk(req.params.id, {

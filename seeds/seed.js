@@ -8,6 +8,7 @@ const commentsData = require('./commentsData.json');
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
+  // The transaction method ensures the array in the json file is added to the database in sequential order
   await sequelize.transaction(async (t) => {
     for (let u = 0; u < usersData.length; u++) {
       await Users.create(usersData[u], { transaction: t, individualHooks: true });
