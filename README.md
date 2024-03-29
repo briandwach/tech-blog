@@ -23,7 +23,7 @@ CMS-style blog site where developers can publish posts and comment on other deve
 
 ## Deployment
 
-Here is the [Deployed Application](https://note-taker-ouaj.onrender.com/) hosted by [Render](https://render.com/) cloud infrastructure.
+Here is the [Deployed Application](https://tech-blog-sg2l.onrender.com/) hosted by [Render](https://render.com/) cloud infrastructure.
 
 *NOTE: The free tier of Render's web services incorporates spinning down on idle.  See below for how this impacts this application.*
 
