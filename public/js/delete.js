@@ -1,11 +1,11 @@
 const deleteFormHandler = async (event) => {
     event.preventDefault();
 
-    // Collect text input from the comment form
+    // Collect post_id from hidden form value
     const post_id = document.querySelector('#post_id').value.trim();
 
     if (post_id) {
-      // Send a POST request to the API endpoint
+      // Send a DELETE request to the API endpoint
       const response = await fetch(`/api/posts/${post_id}`, {
         method: 'DELETE',
         headers: { 'Content-Type': 'application/json' }

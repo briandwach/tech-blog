@@ -1,7 +1,7 @@
 const newFormHandler = async (event) => {
     event.preventDefault();
 
-    // Collect text input from the comment form
+    // Collect text input from the new post form
     const title = document.querySelector('#title-new').value.trim();
     const content = document.querySelector('#content-new').value.trim();
 
@@ -14,7 +14,7 @@ const newFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        // If successful, reload the page to view the updated comment.
+        // If successful, reload the page to view the newly added post
         document.location.replace('/dashboard');
       } else {
         alert(response.statusText);

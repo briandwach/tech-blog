@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { Posts, Users, Comments } = require('../models');
 const withAuth = require('../utils/auth');
 
+// Route to GET and view all posts from a specific user in order of most recent
 router.get('/', async (req, res) => {
   // If the user is not logged in, redirect the request to another route
   if (!req.session.logged_in) {
@@ -30,6 +31,7 @@ router.get('/', async (req, res) => {
   }
 });
 
+// Route to view new post form
 router.get('/new', withAuth, async (req, res) => {
       res.render('new', {
         logged_in: req.session.logged_in,
@@ -37,6 +39,7 @@ router.get('/new', withAuth, async (req, res) => {
       });
   });
 
+  // Route to view update page for a previous post
   router.get('/update/:id', withAuth, async (req, res) => {
     try {
       const postData = await Posts.findByPk(req.params.id, {

@@ -1,13 +1,13 @@
 const updateFormHandler = async (event) => {
     event.preventDefault();
 
-    // Collect text input from the comment form
+    // Collect text input from the update form
     const title = document.querySelector('#title-update').value.trim();
     const content = document.querySelector('#content-update').value.trim();
     const post_id = document.querySelector('#post_id').value.trim();
 
     if (title && content && post_id) {
-      // Send a POST request to the API endpoint
+      // Send a PUT request to the API endpoint
       const response = await fetch(`/api/posts/${post_id}`, {
         method: 'PUT',
         body: JSON.stringify({ title, content }),
